@@ -1,28 +1,36 @@
 /* Modern Loading Spinner Styles */
-.loading-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+.skillhub-loading-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  padding: 1rem !important;
+  text-align: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  margin: 0 auto !important;
 }
 
-.loading-container.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  z-index: 9998;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.skillhub-loading-container.skillhub-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  z-index: 9998 !important;
+  padding: 2rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  box-sizing: border-box !important;
 }
 
 .modern-spinner {
@@ -109,15 +117,18 @@
 }
 
 /* Loading message styles */
-.loading-message {
-  color: #4a5568;
-  font-weight: 500;
+.skillhub-loading-message {
+  color: #4a5568 !important;
+  font-weight: 500 !important;
   text-align: center !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  display: block !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
 }
 
 .message-small {
@@ -133,17 +144,12 @@
 }
 
 /* Pulse animation for overlay */
-.loading-container.overlay .loading-message {
-  animation: pulse 2s infinite;
+.skillhub-loading-container.skillhub-overlay .skillhub-loading-message {
+  animation: pulse 2s infinite !important;
   text-align: center !important;
+  margin-top: 1rem !important;
   width: 100% !important;
-  margin: 1rem 0 0 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  position: relative !important;
-  left: 0 !important;
-  right: 0 !important;
+  display: block !important;
 }
 
 @keyframes pulse {
@@ -155,24 +161,91 @@
   }
 }
 
-/* Mobile responsive styles for loading spinner */
-@media screen and (max-width: 768px) {
-  .loading-container {
-    padding: 1.5rem;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Desktop styles for proper centering */
+@media screen and (min-width: 769px) {
+  .skillhub-loading-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    height: 100vh !important;
+    padding: 2rem !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    z-index: 9999 !important;
   }
   
-  .loading-container.overlay {
-    padding: 2rem 1rem;
+  .skillhub-loading-container.skillhub-overlay {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+  
+  .modern-spinner {
+    margin: 0 auto 1rem auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    position: relative;
+  }
+  
+  .skillhub-loading-message {
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    position: relative !important;
+    transform: translateX(0) !important;
+  }
+  
+  /* Ensure content stays centered */
+  .skillhub-loading-container > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .skillhub-loading-container.skillhub-overlay .skillhub-loading-message {
+    text-align: center !important;
+    margin: 1rem auto 0 auto !important;
+    position: relative !important;
+  }
+}
+
+/* Mobile responsive styles for loading spinner */
+@media screen and (max-width: 768px) {
+  .skillhub-loading-container {
+    padding: 1.5rem !important;
+    min-height: 200px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .skillhub-loading-container.skillhub-overlay {
+    padding: 2rem 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
   
   .modern-spinner {
@@ -182,13 +255,13 @@
     justify-content: center;
   }
   
-  .loading-message {
+  .skillhub-loading-message {
     text-align: center !important;
-    max-width: 90%;
-    word-wrap: break-word;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
+    max-width: 90% !important;
+    word-wrap: break-word !important;
+    display: block !important;
+    margin: 1rem auto 0 auto !important;
+    width: 100% !important;
   }
   
   .message-large {
@@ -205,18 +278,18 @@
 }
 
 @media screen and (max-width: 480px) {
-  .loading-container {
-    padding: 1rem;
-    min-height: 150px;
+  .skillhub-loading-container {
+    padding: 1rem !important;
+    min-height: 150px !important;
   }
   
-  .loading-container.overlay {
-    padding: 1.5rem 0.75rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  .skillhub-loading-container.skillhub-overlay {
+    padding: 1.5rem 0.75rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
   
   .spinner-large .spinner-ring {
@@ -231,28 +304,21 @@
     border-width: 2px;
   }
   
-  .loading-message {
+  .skillhub-loading-message {
     max-width: 100% !important;
-    line-height: 1.4;
+    line-height: 1.4 !important;
     text-align: center !important;
     display: block !important;
     margin: 1rem auto 0 auto !important;
     width: 100% !important;
     padding: 0 1rem !important;
     box-sizing: border-box !important;
-    position: relative !important;
-    left: 0 !important;
-    right: 0 !important;
   }
   
-  .loading-container.overlay .loading-message {
+  .skillhub-loading-container.skillhub-overlay .skillhub-loading-message {
     padding: 0 0.75rem !important;
-    margin: 1rem 0 0 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    margin-top: 1rem !important;
     text-align: center !important;
-    width: 100% !important;
   }
   
   .message-large {
