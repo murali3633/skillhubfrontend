@@ -3359,11 +3359,13 @@ li:hover {
   .auth-card {
     padding: 0.75rem !important;
     margin: 0.25rem 0 !important;
-    border-radius: 10px !important;
+    border-radius: 16px !important;
     max-width: 320px !important;
     width: calc(100% - 1rem) !important;
     min-height: auto !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
   }
   
   .login-form-wrapper,
@@ -3372,8 +3374,12 @@ li:hover {
     margin: 0.25rem auto !important;
     max-width: 300px !important;
     width: calc(100% - 1rem) !important;
-    border-radius: 10px !important;
+    border-radius: 16px !important;
     min-height: auto !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
   }
 
   .auth-header {
@@ -3404,8 +3410,19 @@ li:hover {
   .auth-input {
     padding: 0.625rem 0.75rem 0.625rem 2rem !important;
     font-size: 16px; /* Prevents zoom on iOS */
-    border-radius: 6px !important;
+    border-radius: 12px !important;
     height: auto !important;
+    border: 2px solid #e2e8f0 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  .auth-input:focus {
+    border-color: #667eea !important;
+    background: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-1px) !important;
   }
   
   .input-container {
@@ -3430,8 +3447,26 @@ li:hover {
     padding: 0.625rem 0.875rem !important;
     font-size: 0.875rem !important;
     margin-top: 0.75rem !important;
-    border-radius: 6px !important;
+    border-radius: 12px !important;
     height: auto !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  
+  .auth-button:hover:not(:disabled) {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4) !important;
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%) !important;
+  }
+  
+  .auth-button:active:not(:disabled) {
+    transform: translateY(-1px) !important;
   }
   
   .auth-toggle {
@@ -3508,7 +3543,10 @@ li:hover {
     margin: 0.125rem 0 !important;
     width: calc(100% - 0.75rem) !important;
     max-width: 280px !important;
-    border-radius: 8px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
   }
   
   .login-form-wrapper,
@@ -3516,7 +3554,11 @@ li:hover {
     padding: 0.75rem !important;
     margin: 0.125rem auto !important;
     max-width: 260px !important;
-    border-radius: 8px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
   }
 
   .auth-header {
@@ -3535,7 +3577,18 @@ li:hover {
   .auth-input {
     padding: 0.5rem 0.625rem 0.5rem 1.75rem !important;
     font-size: 16px;
-    border-radius: 5px !important;
+    border-radius: 10px !important;
+    border: 2px solid #e2e8f0 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  .auth-input:focus {
+    border-color: #667eea !important;
+    background: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-1px) !important;
   }
   
   .input-container {
@@ -3556,7 +3609,21 @@ li:hover {
     padding: 0.5rem 0.75rem !important;
     font-size: 0.8rem !important;
     margin-top: 0.625rem !important;
-    border-radius: 5px !important;
+    border-radius: 10px !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    box-shadow: 0 3px 12px rgba(102, 126, 234, 0.3) !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  
+  .auth-button:hover:not(:disabled) {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%) !important;
   }
   
   .auth-toggle {
