@@ -18,6 +18,7 @@ import AddCourse from './pages/AddCourse';
 import EditCourse from './pages/EditCourse';
 import SyllabusDetail from './components/SyllabusDetail';
 import CourseLearning from './pages/CourseLearning';
+import MobileVideoPlayer from './components/MobileVideoPlayer';
 import Unauthorized from './pages/Unauthorized';
 import './App.css';
 function App() {
@@ -99,6 +100,14 @@ function App() {
                     element={
                       <PrivateRoute requiredRole="student">
                         <CourseLearning />
+                      </PrivateRoute>
+                    } 
+                  />
+                  <Route 
+                    path="/mobile-video/:courseId" 
+                    element={
+                      <PrivateRoute requiredRole="student">
+                        <MobileVideoPlayer />
                       </PrivateRoute>
                     } 
                   />
