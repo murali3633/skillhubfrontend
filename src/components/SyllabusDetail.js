@@ -406,29 +406,21 @@ const SyllabusDetail = () => {
     // Check if it's a mobile device (768px or smaller)
     const isMobile = window.innerWidth <= 768;
     
+    setSelectedModule(moduleData);
+    setSelectedVideo({
+      url: videoUrl,
+      title: `${getModuleLabel(moduleData, moduleIndex)} - Tutorial Video ${videoIndex + 1}`,
+      moduleIndex,
+      videoIndex
+    });
+    
     if (isMobile) {
-      // Navigate to separate mobile video page
-      navigate(`/mobile-video/${course.id}`, {
-        state: {
-          videoUrl,
-          videoTitle: `${getModuleLabel(moduleData, moduleIndex)} - Tutorial Video ${videoIndex + 1}`,
-          moduleIndex,
-          videoIndex,
-          course,
-          moduleData
-        }
-      });
+      // Show mobile video overlay
+      setShowMobileVideo(true);
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
     } else {
-      // Desktop behavior - show video in sidebar
-      setSelectedModule(moduleData);
-      setSelectedVideo({
-        url: videoUrl,
-        title: `${getModuleLabel(moduleData, moduleIndex)} - Tutorial Video ${videoIndex + 1}`,
-        moduleIndex,
-        videoIndex
-      });
-
-      // Scroll to video section on larger screens
+      // Desktop behavior - scroll to video section
       setTimeout(() => {
         const videoSection = document.querySelector('.video-section');
         if (videoSection) {
@@ -440,6 +432,13 @@ const SyllabusDetail = () => {
         }
       }, 100);
     }
+  };
+
+  // Function to close mobile video overlay
+  const closeMobileVideo = () => {
+    setShowMobileVideo(false);
+    // Restore body scroll
+    document.body.style.overflow = 'unset';
   };
 
   // Function to handle module checkbox change
@@ -854,6 +853,50 @@ const SyllabusDetail = () => {
           )}
         </div>
       </div>
+
+      {/* Mobile Video Overlay */}
+      {showMobileVideo && selectedVideo && course && (
+        <div className="mobile-video-overlay">
+          <div className="mobile-video-header">
+            <button onClick={closeMobileVideo} className="close-button">
+              <span className="close-icon">×</span>
+            </button>
+            <div className="video-info-header">
+              <h1 className="course-title">{course?.title || 'Course'}</h1>
+              <p className="video-title-header">{selectedVideo?.title || 'Video'}</p>
+            </div>
+          </div>
+          
+          <div className="mobile-video-container">
+            {selectedVideo?.url ? (
+              <VideoPlayer 
+                videoUrl={selectedVideo.url}
+                title={selectedVideo.title}
+                courseId={course?.id}
+                moduleId={selectedVideo.moduleIndex}
+                videoId={selectedVideo.videoIndex}
+                onVideoComplete={handleVideoComplete}
+              />
+            ) : (
+              <div className="video-loading">
+                <p>Loading video...</p>
+              </div>
+            )}
+          </div>
+          
+          <div className="mobile-video-description">
+            <div className="video-meta">
+              <h2>{selectedVideo?.title || 'Video Title'}</h2>
+              {selectedModule && (
+                <div className="module-description">
+                  <h3>About this Module</h3>
+                  <p>{selectedModule.topic || selectedModule.description || 'Module description'}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
