@@ -9197,24 +9197,81 @@ li:hover {
     font-size: 0.875rem !important;
   }
   
-  /* Floating cards mobile */
+  /* Floating cards mobile - Fix overflow and positioning */
   .home-container .floating-cards {
-    width: 180px !important;
-    height: 180px !important;
+    width: 160px !important;
+    height: 160px !important;
     margin: 0 auto !important;
+    overflow: hidden !important;
+    position: relative !important;
   }
   
   .home-container .floating-cards .card {
-    width: 35px !important;
-    height: 35px !important;
+    width: 30px !important;
+    height: 30px !important;
+    padding: 0.2rem !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    overflow: hidden !important;
   }
   
   .home-container .card-icon {
-    font-size: 0.9rem !important;
+    font-size: 0.7rem !important;
+    margin-bottom: 0.1rem !important;
+    line-height: 1 !important;
   }
   
   .home-container .card-text {
-    font-size: 0.5rem !important;
+    font-size: 0.35rem !important;
+    line-height: 1 !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+  }
+  
+  /* Fix card positioning for mobile */
+  .home-container .card-1 {
+    top: 10px !important;
+    left: 25px !important;
+  }
+  
+  .home-container .card-2 {
+    top: 50px !important;
+    right: 10px !important;
+  }
+  
+  .home-container .card-3 {
+    bottom: 60px !important;
+    left: 10px !important;
+  }
+  
+  .home-container .card-4 {
+    bottom: 10px !important;
+    right: 25px !important;
+  }
+  
+  .home-container .card-5 {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  
+  /* Disable hover animations on mobile for better performance */
+  .home-container .floating-cards .card:hover {
+    transform: none !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .home-container .card-5:hover {
+    transform: translate(-50%, -50%) !important;
   }
   
   /* All sections mobile */
@@ -9455,6 +9512,47 @@ li:hover {
   .navbar .register-link {
     padding: 0.3rem 0.4rem !important;
     font-size: 0.7rem !important;
+  }
+  
+  /* Extra small floating cards */
+  .home-container .floating-cards {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  
+  .home-container .floating-cards .card {
+    width: 25px !important;
+    height: 25px !important;
+    padding: 0.15rem !important;
+  }
+  
+  .home-container .card-icon {
+    font-size: 0.6rem !important;
+  }
+  
+  .home-container .card-text {
+    font-size: 0.3rem !important;
+  }
+  
+  /* Adjust positioning for smaller container */
+  .home-container .card-1 {
+    top: 8px !important;
+    left: 20px !important;
+  }
+  
+  .home-container .card-2 {
+    top: 40px !important;
+    right: 8px !important;
+  }
+  
+  .home-container .card-3 {
+    bottom: 50px !important;
+    left: 8px !important;
+  }
+  
+  .home-container .card-4 {
+    bottom: 8px !important;
+    right: 20px !important;
   }
 }
 
