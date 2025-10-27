@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 import VideoPlayer from './VideoPlayer';
-import APIService from '../services/apiService';
 import './SyllabusDetail.css';
+import APIService from '../services/apiService';
+import { useAuth } from '../context/AuthContext';
 
 const SyllabusDetail = () => {
   const location = useLocation();
