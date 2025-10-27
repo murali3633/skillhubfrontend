@@ -34,60 +34,6 @@ const GeminiChat = () => {
     testConnection();
   }, []);
 
-  const testAPI = async () => {
-    console.log('Testing API connection...');
-    
-    // First test if we can reach the API at all
-    const API_KEY = process.env.REACT_APP_GEMINI_API_KEY;
-    console.log('Testing with API Key:', API_KEY ? 'Present' : 'Missing');
-    
-    try {
-      // Test if the API key works with a simple request
-      const testUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${API_KEY}`;
-      console.log('Testing API key with simple request...');
-      
-      const testResponse = await fetch(testUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          contents: [{
-            parts: [{
-              text: "Hello"
-            }]
-          }]
-        })
-      });
-      
-      console.log('Test response status:', testResponse.status, testResponse.statusText);
-      
-      if (testResponse.ok) {
-        const data = await testResponse.json();
-        console.log('Test successful! Response:', data);
-      } else {
-        const errorText = await testResponse.text();
-        console.log('Test failed. Error response:', errorText);
-        
-        // Check if it's an API key issue
-        if (testResponse.status === 403) {
-          console.log('❌ API key issue: Make sure Gemini API is enabled in Google Cloud Console');
-        } else if (testResponse.status === 400) {
-          console.log('❌ Request format issue');
-        } else if (testResponse.status === 404) {
-          console.log('❌ Endpoint not found - API might not be available');
-        }
-      }
-    } catch (error) {
-      console.log('Test request failed:', error);
-    }
-    
-    // Then test the actual chat
-    setInputMessage('Hello, can you help me?');
-    setTimeout(() => {
-      sendMessage();
-    }, 500);
-  };
 
   // Only show for students - check this AFTER declaring ALL hooks
   if (!user || user.role !== 'student') {
@@ -310,13 +256,6 @@ Always be helpful but CONCISE. Students want quick, clear answers.`;
               <span>SkillBot - AI Assistant</span>
             </div>
             <div className="chat-actions">
-              <button 
-                className="clear-btn" 
-                onClick={testAPI}
-                title="Test API"
-              >
-                🧪
-              </button>
               <button 
                 className="clear-btn" 
                 onClick={clearChat}
