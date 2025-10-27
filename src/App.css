@@ -6068,6 +6068,85 @@ li:hover {
   }
 }
 
+/* ========================================
+   ANALYTICS TABLE MOBILE RESPONSIVE
+   ======================================== */
+
+/* Mobile responsive table scrolling */
+@media screen and (max-width: 768px) {
+  .table-container {
+    margin: 0 -1rem !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+  
+  .table-scroll {
+    position: relative !important;
+  }
+  
+  .table-scroll::after {
+    content: '👉 Scroll right to see more' !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 10px !important;
+    transform: translateY(-50%) !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 4px !important;
+    font-size: 0.75rem !important;
+    pointer-events: none !important;
+    opacity: 0.8 !important;
+    z-index: 10 !important;
+    animation: fadeInOut 3s ease-in-out infinite !important;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+  
+  .analytics-table {
+    font-size: 0.75rem !important;
+  }
+  
+  .analytics-table th {
+    padding: 12px 8px !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+  }
+  
+  .analytics-table td {
+    padding: 16px 8px !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .table-scroll::after {
+    content: '👉 Swipe right' !important;
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+  
+  .analytics-table {
+    font-size: 0.7rem !important;
+    min-width: 700px !important;
+  }
+  
+  .analytics-table th {
+    padding: 10px 6px !important;
+    font-size: 0.7rem !important;
+  }
+  
+  .analytics-table td {
+    padding: 14px 6px !important;
+    font-size: 0.7rem !important;
+  }
+}
+
 @media (max-width: 480px) {
   .faculty-dashboard .courses-grid {
     grid-template-columns: 1fr;
