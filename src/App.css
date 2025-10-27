@@ -5502,31 +5502,99 @@ li:hover {
     padding: 0 0.75rem;
   }
 
-  /* Mobile Course Card Optimizations */
-  .course-card {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 10px;
+  /* Enhanced Mobile Enrolled Course Card Styling */
+  .student-dashboard .enrolled-course-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
   }
 
-  .course-card .course-header {
+  .student-dashboard .enrolled-course-card .course-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1a202c;
     margin-bottom: 0.75rem;
   }
 
+  .student-dashboard .enrolled-course-card .course-meta {
+    margin-bottom: 0.75rem;
+  }
+
+  .student-dashboard .enrolled-course-card .course-meta span {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+  }
+
+  .student-dashboard .enrolled-course-card .course-description {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+
+  .student-dashboard .enrolled-course-card .course-actions {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .student-dashboard .enrolled-course-card .continue-btn {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .student-dashboard .enrolled-course-card .continue-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  }
+
+  /* Enhanced Mobile Course Card Styling */
+  .course-card {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+  }
+
+  .course-card .course-header {
+    margin-bottom: 1rem;
+  }
+
   .course-card .title-code-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
   }
 
   .course-card .course-title {
-    font-size: 1rem;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1a202c;
+    margin-bottom: 0;
+    flex: 1;
+    min-width: 0;
   }
 
   .course-card .course-code {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    flex-shrink: 0;
     padding: 0.25rem 0.5rem;
   }
 
@@ -5542,9 +5610,10 @@ li:hover {
   }
 
   .course-card .course-description {
-    font-size: 0.8rem;
-    line-height: 1.3;
-    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: #4b5563;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     line-clamp: 3;
@@ -5553,11 +5622,26 @@ li:hover {
   }
 
   .course-card .course-details {
-    gap: 0.5rem;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .course-card .detail-row {
-    gap: 0.75rem;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .course-card .detail-item {
+    font-size: 0.8rem;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .course-card .detail-item strong {
+    color: #374151;
+    font-weight: 600;
   }
 
   .course-card .detail-item {
@@ -5570,13 +5654,26 @@ li:hover {
 
   .course-card .course-actions {
     margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
   }
 
   .course-card .register-btn {
     width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 0.875rem;
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
     border-radius: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .course-card .register-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
   }
 
   /* Mobile Search and Filter */
