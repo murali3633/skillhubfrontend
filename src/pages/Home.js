@@ -60,14 +60,27 @@ const Home = () => {
           </div>
         </div>
         <div className="hero-content">
+          {/* Personalized Welcome for Faculty */}
+          {isAuthenticated() && user?.role === 'faculty' && (
+            <div className="faculty-welcome">
+              <h2 className="welcome-title">Welcome back, {user?.name?.split(' ')[0] || user?.name}! 👋</h2>
+              <p className="welcome-subtitle">Ready to inspire and educate your students today?</p>
+            </div>
+          )}
           
           <h1 className="hero-title">
-            Master New Skills with
-                    <span className="gradient-text"> SkillHub</span>
+            {isAuthenticated() && user?.role === 'faculty' ? (
+              <>Manage Your Courses with <span className="gradient-text">SkillHub</span></>
+            ) : (
+              <>Master New Skills with <span className="gradient-text"> SkillHub</span></>
+            )}
           </h1>
           <p className="hero-description">
-            Join thousands of learners in our comprehensive skill development platform. 
-            From programming to design, marketing to management - unlock your potential today.
+            {isAuthenticated() && user?.role === 'faculty' ? (
+              'Create engaging courses, track student progress, and build the next generation of skilled professionals.'
+            ) : (
+              'Join thousands of learners in our comprehensive skill development platform. From programming to design, marketing to management - unlock your potential today.'
+            )}
           </p>
           <div className="hero-buttons" role="group" aria-label="Primary actions">
             {!isAuthenticated() ? (
