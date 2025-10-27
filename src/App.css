@@ -6147,6 +6147,84 @@ li:hover {
   }
 }
 
+/* ========================================
+   LOADING STATES MOBILE RESPONSIVE
+   ======================================== */
+
+/* Loading students table row */
+.loading-students {
+  text-align: center !important;
+  padding: 2rem 1rem !important;
+  font-style: italic !important;
+  color: #666 !important;
+  background: #f8f9fa !important;
+}
+
+/* Mobile responsive loading states */
+@media screen and (max-width: 768px) {
+  .loading-students {
+    padding: 1.5rem 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Button spinner centering */
+  .auth-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+  }
+  
+  .button-spinner {
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Upload states */
+  .upload-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .upload-text {
+    text-align: center !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .upload-subtext {
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    color: #666 !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .loading-students {
+    padding: 1rem 0.5rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  .auth-button {
+    min-height: 48px !important;
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .button-spinner {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  
+  .upload-text {
+    font-size: 0.9rem !important;
+  }
+  
+  .upload-subtext {
+    font-size: 0.75rem !important;
+  }
+}
+
 @media (max-width: 480px) {
   .faculty-dashboard .courses-grid {
     grid-template-columns: 1fr;
