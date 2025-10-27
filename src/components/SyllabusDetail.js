@@ -48,8 +48,6 @@ const SyllabusDetail = () => {
   useEffect(() => {
     if (course?.id) {
       const certificateKey = `certificate_${course.id}`;
-      const certificateData = localStorage.getItem(certificateKey);
-      
       // Certificate validation will be done in separate useEffect after progress loads
       
       // Load module progress from localStorage
@@ -114,7 +112,7 @@ const SyllabusDetail = () => {
         }
       }
     }
-  }, [course?.id, moduleProgress, unlockedModules]);
+  }, [course?.id, course.syllabus, moduleProgress, unlockedModules]);
 
   // Generate certificate
   const generateCertificate = async () => {
