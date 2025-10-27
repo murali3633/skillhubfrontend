@@ -190,6 +190,12 @@ const StudentDashboard = () => {
 
   return (
     <div className="student-dashboard">
+      {/* Student Welcome Section */}
+      <div className="student-welcome">
+        <h2 className="welcome-title">Welcome back, {user?.name?.split(' ')[0] || user?.name}! 🎓</h2>
+        <p className="welcome-subtitle">Ready to continue your learning journey and master new skills?</p>
+      </div>
+
       {/* Available Courses Section */}
       <div className="available-courses-section">
         <h2>Available Skill Courses</h2>
