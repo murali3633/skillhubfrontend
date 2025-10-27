@@ -9295,3 +9295,186 @@ li:hover {
     display: none !important;
   }
 }
+
+/* ========================================
+   NAVBAR MOBILE RESPONSIVE OVERRIDES
+   ======================================== */
+
+/* Mobile navbar fixes with maximum specificity */
+@media screen and (max-width: 480px) {
+  /* Navbar container mobile */
+  .navbar {
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 56px !important;
+  }
+  
+  .navbar .navbar-container {
+    padding: 0.5rem 0.75rem !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Navbar left section mobile */
+  .navbar .navbar-left {
+    flex: 0 0 auto !important;
+    gap: 0.5rem !important;
+  }
+  
+  .navbar .navbar-brand {
+    font-size: 1rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+  
+  .navbar .brand-icon {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Navbar menu mobile */
+  .navbar .navbar-menu {
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+    margin: 0 !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+  }
+  
+  /* Navbar links mobile */
+  .navbar .navbar-link {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+    border-radius: 4px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* User info mobile */
+  .navbar .user-info {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.5rem !important;
+    white-space: nowrap !important;
+    max-width: 120px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    flex-shrink: 1 !important;
+  }
+  
+  /* Logout button mobile */
+  .navbar .logout-btn {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+    border-radius: 4px !important;
+    background: #dc3545 !important;
+    color: white !important;
+    border: none !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Register button mobile */
+  .navbar .register-link {
+    background: #667eea !important;
+    color: white !important;
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.75rem !important;
+    border-radius: 4px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Dashboard link mobile */
+  .navbar .dashboard-link {
+    background: rgba(102, 126, 234, 0.1) !important;
+    color: #667eea !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* Tablet navbar responsive */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .navbar .navbar-container {
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .navbar .navbar-brand {
+    font-size: 1.1rem !important;
+  }
+  
+  .navbar .navbar-menu {
+    gap: 0.5rem !important;
+  }
+  
+  .navbar .navbar-link {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  .navbar .user-info {
+    font-size: 0.8rem !important;
+    max-width: 150px !important;
+  }
+}
+
+/* Extra small mobile devices (≤360px) */
+@media screen and (max-width: 360px) {
+  .navbar .navbar-container {
+    padding: 0.4rem 0.5rem !important;
+  }
+  
+  .navbar .navbar-brand {
+    font-size: 0.9rem !important;
+  }
+  
+  .navbar .brand-icon {
+    font-size: 1.1rem !important;
+  }
+  
+  .navbar .navbar-link {
+    padding: 0.3rem 0.4rem !important;
+    font-size: 0.7rem !important;
+  }
+  
+  .navbar .user-info {
+    font-size: 0.65rem !important;
+    max-width: 100px !important;
+    padding: 0.25rem 0.4rem !important;
+  }
+  
+  .navbar .logout-btn {
+    padding: 0.3rem 0.4rem !important;
+    font-size: 0.7rem !important;
+  }
+  
+  .navbar .register-link {
+    padding: 0.3rem 0.4rem !important;
+    font-size: 0.7rem !important;
+  }
+}
+
+/* Ensure navbar doesn't break on very wide content */
+@media screen and (max-width: 480px) {
+  .navbar .navbar-menu {
+    min-width: 0 !important;
+  }
+  
+  .navbar .navbar-menu > * {
+    min-width: 0 !important;
+  }
+  
+  /* Hide scrollbar on navbar menu if it appears */
+  .navbar .navbar-menu::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .navbar .navbar-menu {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+}
