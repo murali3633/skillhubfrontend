@@ -1,5 +1,5 @@
-/* Mobile Video Player Styles */
-.mobile-video-player {
+/* Mobile Video Page Styles */
+.mobile-video-page {
   min-height: 100vh;
   background: #000;
   color: white;
@@ -64,7 +64,7 @@
   white-space: nowrap;
 }
 
-.video-title {
+.video-title-header {
   font-size: 0.85rem;
   color: #cbd5e0;
   margin: 0;
@@ -337,7 +337,7 @@
     font-size: 0.9rem;
   }
   
-  .video-title {
+  .video-title-header {
     font-size: 0.8rem;
   }
   
@@ -400,7 +400,7 @@
     font-size: 0.85rem;
   }
   
-  .video-title {
+  .video-title-header {
     font-size: 0.75rem;
   }
   
