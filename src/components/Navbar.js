@@ -42,11 +42,6 @@ const Navbar = () => {
           
           {isAuthenticated() ? (
             <>
-              {/* Show clean welcome message */}
-              <div className="user-info">
-                Welcome, {user?.name?.split(' ')[0] || user?.name}
-              </div>
-              
               <Link 
                 to={user?.role === 'student' ? '/student-dashboard' : '/faculty-dashboard'}
                 className="navbar-link dashboard-link"
