@@ -411,6 +411,18 @@ const SyllabusDetail = () => {
       moduleIndex,
       videoIndex
     });
+
+    // Scroll to video section on mobile devices
+    setTimeout(() => {
+      const videoSection = document.querySelector('.video-section');
+      if (videoSection && window.innerWidth <= 768) {
+        videoSection.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start',
+          inline: 'nearest'
+        });
+      }
+    }, 100);
   };
 
   // Function to handle module checkbox change
