@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import VideoPlayer from './VideoPlayer';
-import './MobileVideoPlayer.css';
+import VideoPlayer from '../components/VideoPlayer';
+import './MobileVideoPage.css';
 
-const MobileVideoPlayer = () => {
+const MobileVideoPage = () => {
   const { courseId } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
@@ -91,7 +91,7 @@ const MobileVideoPlayer = () => {
   }
 
   return (
-    <div className="mobile-video-player">
+    <div className="mobile-video-page">
       {/* Header */}
       <div className="mobile-video-header">
         <button onClick={goBack} className="back-button">
@@ -100,7 +100,7 @@ const MobileVideoPlayer = () => {
         </button>
         <div className="video-info-header">
           <h1 className="course-title">{course.title}</h1>
-          <p className="video-title">{currentVideo.title}</p>
+          <p className="video-title-header">{currentVideo.title}</p>
         </div>
       </div>
 
@@ -182,4 +182,4 @@ const MobileVideoPlayer = () => {
   );
 };
 
-export default MobileVideoPlayer;
+export default MobileVideoPage;
