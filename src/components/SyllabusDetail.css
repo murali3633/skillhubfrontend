@@ -1210,22 +1210,11 @@ main:has(.syllabus-detail-page) {
     padding: 0 !important;
   }
   
-  /* Hide certificate section initially on mobile */
+  /* Ensure certificate section is integrated within modules */
   .modules-sidebar .certificate-section {
     position: static !important;
     bottom: auto !important;
     margin-top: 8px !important;
-    opacity: 0 !important;
-    transform: translateY(20px) !important;
-    transition: all 0.3s ease !important;
-    pointer-events: none !important;
-  }
-
-  /* Show certificate section when scrolled to bottom */
-  .modules-sidebar.scrolled-to-bottom .certificate-section {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    pointer-events: auto !important;
   }
 }
 
@@ -1269,31 +1258,6 @@ main:has(.syllabus-detail-page) {
     border-radius: 8px;
     overflow-y: auto !important;
     overflow-x: visible !important;
-    position: relative;
-  }
-
-  /* Scroll indicator for certificate */
-  .modules-sidebar::after {
-    content: '↓ Scroll for Certificate';
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(59, 130, 246, 0.9);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.7rem;
-    font-weight: 500;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: 10;
-  }
-
-  /* Hide scroll indicator when scrolled to bottom */
-  .modules-sidebar.scrolled-to-bottom::after {
-    opacity: 0;
   }
   
   .modules-sidebar h3 {
@@ -1477,16 +1441,6 @@ main:has(.syllabus-detail-page) {
     border-radius: 6px;
     overflow-y: auto !important;
     overflow-x: visible !important;
-    position: relative;
-  }
-
-  /* Scroll indicator for smallest mobile */
-  .modules-sidebar::after {
-    content: '↓ Certificate';
-    bottom: 6px;
-    font-size: 0.65rem;
-    padding: 3px 6px;
-    border-radius: 10px;
   }
   
   .modules-sidebar h3 {
