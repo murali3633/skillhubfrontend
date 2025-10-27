@@ -9091,3 +9091,207 @@ li:hover {
     display: none; /* Hide decorative shapes on mobile for performance */
   }
 }
+
+/* ========================================
+   FINAL RESPONSIVE OVERRIDES - HIGHEST PRIORITY
+   ======================================== */
+
+/* CRITICAL: Mobile-first responsive design with maximum specificity */
+@media screen and (max-width: 480px) {
+  /* Force mobile layout for home container */
+  .home-container {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Hero section mobile override */
+  .home-container .hero-section {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 1.5rem 1rem !important;
+    gap: 1.5rem !important;
+    min-height: auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Hero content mobile */
+  .home-container .hero-section .hero-content {
+    order: 2 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: none !important;
+  }
+  
+  /* Hero image mobile */
+  .home-container .hero-section .hero-image {
+    order: 1 !important;
+    width: 100% !important;
+    flex: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Typography mobile */
+  .home-container .hero-title {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+  }
+  
+  .home-container .hero-description {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+  
+  /* Buttons mobile */
+  .home-container .hero-buttons {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .home-container .hero-buttons .btn-large {
+    width: 100% !important;
+    max-width: 280px !important;
+    padding: 0.875rem 1.5rem !important;
+    font-size: 1rem !important;
+    justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  
+  /* Stats mobile */
+  .home-container .hero-stats {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 1.5rem !important;
+    justify-content: center !important;
+  }
+  
+  .home-container .hero-stat {
+    width: 100% !important;
+    max-width: 180px !important;
+    text-align: center !important;
+  }
+  
+  .home-container .hero-stat .stat-number {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+  }
+  
+  .home-container .hero-stat .stat-label {
+    font-size: 0.875rem !important;
+  }
+  
+  /* Floating cards mobile */
+  .home-container .floating-cards {
+    width: 180px !important;
+    height: 180px !important;
+    margin: 0 auto !important;
+  }
+  
+  .home-container .floating-cards .card {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .home-container .card-icon {
+    font-size: 0.9rem !important;
+  }
+  
+  .home-container .card-text {
+    font-size: 0.5rem !important;
+  }
+  
+  /* All sections mobile */
+  .home-container .features-section,
+  .home-container .testimonials-section,
+  .home-container .how-section,
+  .home-container .stats-section,
+  .home-container .cta-section {
+    padding: 2.5rem 0 !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Section headers mobile */
+  .home-container .section-header {
+    padding: 0 1rem !important;
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+  }
+  
+  .home-container .section-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+    text-align: center !important;
+  }
+  
+  .home-container .section-subtitle {
+    font-size: 1rem !important;
+    text-align: center !important;
+  }
+  
+  /* Containers mobile */
+  .home-container .features-container,
+  .home-container .testimonials-container,
+  .home-container .how-container,
+  .home-container .stats-container,
+  .home-container .cta-container {
+    padding: 0 1rem !important;
+    max-width: 100% !important;
+  }
+  
+  /* Grids mobile */
+  .home-container .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .home-container .how-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .home-container .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+  
+  /* Cards mobile */
+  .home-container .feature-card,
+  .home-container .how-card {
+    padding: 1.5rem !important;
+    text-align: center !important;
+  }
+  
+  .home-container .testimonial-card {
+    padding: 1.5rem !important;
+    text-align: center !important;
+  }
+  
+  .home-container .stat-item {
+    padding: 1rem !important;
+    text-align: center !important;
+  }
+  
+  /* Hide decorative elements */
+  .home-container .hero-shapes,
+  .home-container .hero-background,
+  .home-container .shape {
+    display: none !important;
+  }
+}
