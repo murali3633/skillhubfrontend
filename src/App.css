@@ -8765,27 +8765,50 @@ li:hover {
   }
   
   /* CTA Section Mobile */
-  .cta-section {
+  .home-container .cta-section {
     padding: 3rem 0 !important;
   }
   
-  .cta-container {
+  .home-container .cta-container {
     padding: 0 1rem !important;
-  }
-  
-  .cta-content {
     text-align: center !important;
   }
   
-  .cta-content h2 {
-    font-size: 1.5rem !important;
-    margin-bottom: 1rem !important;
+  .home-container .cta-content {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
-  .cta-content p {
+  .home-container .cta-content h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+  }
+  
+  .home-container .cta-content p {
     font-size: 1rem !important;
     margin-bottom: 1.5rem !important;
     line-height: 1.5 !important;
+    text-align: center !important;
+  }
+  
+  /* Center the CTA button specifically */
+  .home-container .cta-content .btn {
+    margin: 0 auto !important;
+    display: block !important;
+    text-align: center !important;
+    width: auto !important;
+    max-width: 280px !important;
+  }
+  
+  .home-container .cta-content .btn-large {
+    padding: 0.875rem 2rem !important;
+    font-size: 1rem !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
   
   /* Hide decorative elements on mobile for performance */
@@ -9476,6 +9499,13 @@ li:hover {
   .navbar .user-info {
     font-size: 0.8rem !important;
     max-width: 150px !important;
+  }
+  
+  /* CTA Section Tablet */
+  .home-container .cta-content .btn {
+    margin: 0 auto !important;
+    display: block !important;
+    text-align: center !important;
   }
 }
 
