@@ -1008,15 +1008,23 @@ main:has(.syllabus-detail-page) {
 /* Tablet */
 @media (max-width: 768px) {
   .syllabus-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
     height: auto;
     padding: 0.75rem;
   }
   
+  /* Video section first on tablet too */
+  .video-section {
+    order: 1;
+    min-height: 350px;
+  }
+  
+  /* Modules sidebar second */
   .modules-sidebar {
-    order: -1;
-    max-height: 400px;
+    order: 2;
+    max-height: 60vh;
     padding: 0.75rem;
     overflow-y: auto;
     border-radius: 10px;
@@ -1128,24 +1136,24 @@ main:has(.syllabus-detail-page) {
     width: 100% !important;
     max-width: none !important;
     min-width: auto !important;
-    padding: 16px 20px !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    margin: 16px 0 20px 0 !important;
-    border-radius: 12px !important;
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    margin: 6px 0 8px 0 !important;
+    border-radius: 6px !important;
     text-align: center !important;
     box-sizing: border-box !important;
     position: relative !important;
-    z-index: 999 !important;
+    z-index: 10 !important;
     background: #10b981 !important;
     color: white !important;
-    border: 3px solid #059669 !important;
+    border: 1px solid #059669 !important;
     cursor: pointer !important;
-    line-height: 1.5 !important;
-    min-height: 56px !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+    line-height: 1.3 !important;
+    min-height: 36px !important;
+    text-transform: none !important;
+    letter-spacing: 0px !important;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.2) !important;
   }
   
   .certificate-btn.disabled {
@@ -1166,15 +1174,15 @@ main:has(.syllabus-detail-page) {
   .certificate-section {
     display: block !important;
     width: 100% !important;
-    margin: 20px 0 60px 0 !important;
-    padding: 24px 20px 32px 20px !important;
-    background: #ffffff !important;
-    border: 3px solid #10b981 !important;
-    border-radius: 16px !important;
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25) !important;
+    margin: 10px 0 20px 0 !important;
+    padding: 12px 16px 16px 16px !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
     position: relative !important;
-    z-index: 100 !important;
-    min-height: 250px !important;
+    z-index: 10 !important;
+    min-height: auto !important;
     overflow: visible !important;
   }
   
@@ -1205,16 +1213,33 @@ main:has(.syllabus-detail-page) {
   }
   
   .syllabus-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 0.75rem;
     padding: 0.5rem;
     height: auto;
     width: 100%;
   }
   
+  /* Video section comes first on mobile */
+  .video-section {
+    order: 1;
+    min-height: 250px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    scroll-margin-top: 20px;
+  }
+  
+  /* Smooth scrolling for better UX */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Modules sidebar comes second */
   .modules-sidebar {
-    max-height: 70vh;
-    padding: 0.75rem 0.75rem 60px 0.75rem;
+    order: 2;
+    max-height: 50vh;
+    padding: 0.75rem;
     border-radius: 8px;
     overflow-y: auto !important;
     overflow-x: visible !important;
