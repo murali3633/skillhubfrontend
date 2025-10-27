@@ -410,10 +410,10 @@ const SyllabusDetail = () => {
       videoIndex
     });
 
-    // Scroll to video section on mobile devices
+    // Scroll to video section on mobile/tablet devices
     setTimeout(() => {
       const videoSection = document.querySelector('.video-section');
-      if (videoSection && window.innerWidth <= 768) {
+      if (videoSection && window.innerWidth <= 1024) {
         videoSection.scrollIntoView({ 
           behavior: 'smooth', 
           block: 'start',
