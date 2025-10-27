@@ -9634,33 +9634,20 @@ li:hover {
     border: none !important;
   }
   
-  /* Logo Section Mobile */
+  /* Logo Section Mobile - Icon removed */
   .auth-logo {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
   }
   
   .auth-logo .logo-icon {
-    width: 70px !important;
-    height: 70px !important;
-    margin-bottom: 0.75rem !important;
-    border-radius: 50% !important;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  
-  .auth-logo .logo-icon svg {
-    width: 40px !important;
-    height: 40px !important;
-    color: white !important;
+    display: none !important;
   }
   
   .auth-logo .logo-text {
-    font-size: 2rem !important;
+    font-size: 1.75rem !important;
     font-weight: 700 !important;
     color: #1a202c !important;
     margin: 0 !important;
@@ -9978,13 +9965,11 @@ li:hover {
     }
     
     .auth-logo {
-      margin-bottom: 1.25rem !important;
+      margin-bottom: 0.75rem !important;
     }
     
     .auth-logo .logo-icon {
-      width: 60px !important;
-      height: 60px !important;
-      margin-bottom: 0.5rem !important;
+      display: none !important;
     }
     
     .auth-logo .logo-text {
@@ -9992,7 +9977,7 @@ li:hover {
     }
     
     .auth-header {
-      margin-bottom: 1.25rem !important;
+      margin-bottom: 1rem !important;
     }
     
     .auth-header h1 {
@@ -10000,7 +9985,7 @@ li:hover {
     }
     
     .auth-tabs {
-      margin-bottom: 1.25rem !important;
+      margin-bottom: 1rem !important;
     }
     
     .form-field {
