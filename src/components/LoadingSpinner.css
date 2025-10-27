@@ -137,9 +137,11 @@
   animation: pulse 2s infinite;
   text-align: center !important;
   width: 100% !important;
-  margin: 1rem auto 0 auto !important;
-  display: block !important;
-  position: relative;
+  margin: 1rem 0 0 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
   left: 0 !important;
   right: 0 !important;
 }
@@ -245,7 +247,12 @@
   
   .loading-container.overlay .loading-message {
     padding: 0 0.75rem !important;
-    margin: 1rem auto 0 auto !important;
+    margin: 1rem 0 0 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   
   .message-large {
