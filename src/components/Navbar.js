@@ -42,9 +42,9 @@ const Navbar = () => {
           
           {isAuthenticated() ? (
             <>
-              {/* Show user info and dashboard link */}
+              {/* Show clean welcome message */}
               <div className="user-info">
-                Welcome, {user?.name} ({user?.role})
+                Welcome, {user?.name?.split(' ')[0] || user?.name}
               </div>
               
               <Link 
