@@ -13,6 +13,7 @@ const SyllabusDetail = () => {
   
   const [selectedModule, setSelectedModule] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [showMobileVideo, setShowMobileVideo] = useState(false);
   const [courseProgress, setCourseProgress] = useState({
     overallProgress: 0,
     certificateGenerated: false,
