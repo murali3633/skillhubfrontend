@@ -1060,18 +1060,6 @@ main:has(.syllabus-detail-page) {
   
   .video-item {
     padding: 0.75rem 1rem;
-    position: relative;
-  }
-  
-  /* Add mobile video indicator */
-  .video-item::after {
-    content: '📱';
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1rem;
-    opacity: 0.7;
   }
   
   .video-number {
@@ -1320,18 +1308,6 @@ main:has(.syllabus-detail-page) {
   
   .video-item {
     padding: 0.75rem 1rem;
-    position: relative;
-  }
-  
-  /* Add mobile video indicator */
-  .video-item::after {
-    content: '📱';
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.9rem;
-    opacity: 0.7;
   }
   
   .video-number {
