@@ -9627,9 +9627,9 @@ li:hover {
   .auth-card {
     background: #ffffff !important;
     border-radius: 24px !important;
-    padding: 2rem 1.5rem !important;
+    padding: 1.5rem 1.25rem !important;
     width: 100% !important;
-    max-width: 400px !important;
+    max-width: 380px !important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
     border: none !important;
   }
@@ -9639,13 +9639,13 @@ li:hover {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.5rem !important;
   }
   
   .auth-logo .logo-icon {
-    width: 80px !important;
-    height: 80px !important;
-    margin-bottom: 1rem !important;
+    width: 70px !important;
+    height: 70px !important;
+    margin-bottom: 0.75rem !important;
     border-radius: 50% !important;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
     display: flex !important;
@@ -9669,7 +9669,7 @@ li:hover {
   /* Header Mobile */
   .auth-header {
     text-align: center !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.5rem !important;
   }
   
   .auth-header h1 {
@@ -9691,7 +9691,7 @@ li:hover {
     background: #f1f5f9 !important;
     border-radius: 12px !important;
     padding: 4px !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.5rem !important;
     position: relative !important;
   }
   
@@ -9723,7 +9723,7 @@ li:hover {
   
   /* Form Fields Mobile */
   .form-field {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.25rem !important;
   }
   
   .input-container {
@@ -9787,7 +9787,7 @@ li:hover {
   /* Auth Button Mobile */
   .auth-button {
     width: 100% !important;
-    padding: 1rem !important;
+    padding: 0.875rem !important;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
     color: white !important;
     border: none !important;
@@ -9800,7 +9800,7 @@ li:hover {
     align-items: center !important;
     justify-content: center !important;
     gap: 0.5rem !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
   }
   
   .auth-button:hover {
@@ -9814,27 +9814,23 @@ li:hover {
     transform: none !important;
   }
   
-  /* Form Options Mobile */
+  /* Form Options Mobile - Hide remember me */
   .form-options {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    margin-bottom: 2rem !important;
-    font-size: 0.875rem !important;
+    display: none !important;
   }
   
   .remember-me {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.5rem !important;
-    color: #64748b !important;
-    cursor: pointer !important;
+    display: none !important;
   }
   
   .forgot-link {
     color: #667eea !important;
     text-decoration: none !important;
     font-weight: 500 !important;
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+    font-size: 0.875rem !important;
   }
   
   .forgot-link:hover {
@@ -9977,29 +9973,51 @@ li:hover {
   /* Mobile-specific adjustments for smaller screens */
   @media screen and (max-width: 480px) {
     .auth-card {
-      padding: 1.5rem 1rem !important;
-      margin: 1rem !important;
+      padding: 1.25rem 1rem !important;
+      margin: 0.75rem !important;
+    }
+    
+    .auth-logo {
+      margin-bottom: 1.25rem !important;
     }
     
     .auth-logo .logo-icon {
-      width: 70px !important;
-      height: 70px !important;
+      width: 60px !important;
+      height: 60px !important;
+      margin-bottom: 0.5rem !important;
     }
     
     .auth-logo .logo-text {
-      font-size: 1.75rem !important;
+      font-size: 1.5rem !important;
+    }
+    
+    .auth-header {
+      margin-bottom: 1.25rem !important;
     }
     
     .auth-header h1 {
       font-size: 1.25rem !important;
     }
     
+    .auth-tabs {
+      margin-bottom: 1.25rem !important;
+    }
+    
+    .form-field {
+      margin-bottom: 1rem !important;
+    }
+    
     .auth-input {
-      padding: 0.875rem 0.875rem 0.875rem 2.75rem !important;
+      padding: 0.75rem 0.75rem 0.75rem 2.5rem !important;
     }
     
     .input-icon {
-      left: 0.875rem !important;
+      left: 0.75rem !important;
+    }
+    
+    .auth-button {
+      padding: 0.75rem !important;
+      margin-bottom: 0.75rem !important;
     }
   }
 }
