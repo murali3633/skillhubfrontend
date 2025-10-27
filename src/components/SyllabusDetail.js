@@ -402,25 +402,43 @@ const SyllabusDetail = () => {
       return;
     }
     
-    setSelectedModule(moduleData);
-    setSelectedVideo({
-      url: videoUrl,
-      title: `${getModuleLabel(moduleData, moduleIndex)} - Tutorial Video ${videoIndex + 1}`,
-      moduleIndex,
-      videoIndex
-    });
+    // Check if it's a mobile device (768px or smaller)
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+      // Navigate to separate mobile video page
+      navigate(`/mobile-video/${course.id}`, {
+        state: {
+          videoUrl,
+          videoTitle: `${getModuleLabel(moduleData, moduleIndex)} - Tutorial Video ${videoIndex + 1}`,
+          moduleIndex,
+          videoIndex,
+          course,
+          moduleData
+        }
+      });
+    } else {
+      // Desktop behavior - show video in sidebar
+      setSelectedModule(moduleData);
+      setSelectedVideo({
+        url: videoUrl,
+        title: `${getModuleLabel(moduleData, moduleIndex)} - Tutorial Video ${videoIndex + 1}`,
+        moduleIndex,
+        videoIndex
+      });
 
-    // Scroll to video section on mobile/tablet devices
-    setTimeout(() => {
-      const videoSection = document.querySelector('.video-section');
-      if (videoSection && window.innerWidth <= 1024) {
-        videoSection.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'start',
-          inline: 'nearest'
-        });
-      }
-    }, 100);
+      // Scroll to video section on larger screens
+      setTimeout(() => {
+        const videoSection = document.querySelector('.video-section');
+        if (videoSection) {
+          videoSection.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start',
+            inline: 'nearest'
+          });
+        }
+      }, 100);
+    }
   };
 
   // Function to handle module checkbox change
