@@ -1015,15 +1015,9 @@ main:has(.syllabus-detail-page) {
     padding: 0.75rem;
   }
   
-  /* Tablet video section - prominent display */
+  /* Hide video section on tablet - videos open in separate page */
   .video-section {
-    order: 1;
-    min-height: 400px;
-    margin-bottom: 1rem;
-  }
-  
-  .video-section .current-video {
-    min-height: 400px;
+    display: none;
   }
   
   /* Modules sidebar second */
@@ -1060,6 +1054,18 @@ main:has(.syllabus-detail-page) {
   
   .video-item {
     padding: 0.75rem 1rem;
+    position: relative;
+  }
+  
+  /* Add mobile video indicator for tablet */
+  .video-item::after {
+    content: '🎬';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    opacity: 0.8;
   }
   
   .video-number {
@@ -1241,25 +1247,9 @@ main:has(.syllabus-detail-page) {
     width: 100%;
   }
   
-  /* Mobile video section - full width and prominent */
+  /* Hide video section on mobile - videos open in separate page */
   .video-section {
-    order: 1;
-    width: 100%;
-    min-height: 300px;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    background: #000;
-  }
-  
-  .video-section .current-video {
-    min-height: 300px;
-    background: #000;
-  }
-  
-  .video-section .no-video-selected {
-    min-height: 200px;
-    background: #f8fafc;
-    color: #64748b;
+    display: none;
   }
   
   /* Smooth scrolling for better UX */
@@ -1308,6 +1298,18 @@ main:has(.syllabus-detail-page) {
   
   .video-item {
     padding: 0.75rem 1rem;
+    position: relative;
+  }
+  
+  /* Add mobile video indicator */
+  .video-item::after {
+    content: '🎬';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    opacity: 0.8;
   }
   
   .video-number {
