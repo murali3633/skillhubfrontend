@@ -1,23 +1,14 @@
-/* Modern Loading Spinner Styles - Universal Centering */
+/* Modern Loading Spinner Styles */
 .skillhub-loading-container {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 1rem !important;
-  padding: 2rem !important;
+  padding: 1rem !important;
   text-align: center !important;
-  width: 100vw !important;
-  height: 100vh !important;
+  width: 100% !important;
   box-sizing: border-box !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  margin: 0 !important;
-  background: rgba(255, 255, 255, 0.98) !important;
-  z-index: 9999 !important;
 }
 
 .skillhub-loading-container.skillhub-overlay {
@@ -45,7 +36,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
 }
 
 .spinner-ring {
@@ -124,7 +114,7 @@
   }
 }
 
-/* Loading message styles - Universal Centering */
+/* Loading message styles */
 .skillhub-loading-message {
   color: #4a5568 !important;
   font-weight: 500 !important;
@@ -133,9 +123,7 @@
   display: block !important;
   margin: 0 auto !important;
   width: 100% !important;
-  max-width: 400px !important;
   box-sizing: border-box !important;
-  position: relative !important;
 }
 
 .message-small {
@@ -168,15 +156,88 @@
   }
 }
 
-/* Universal centering for all devices */
-.skillhub-loading-container * {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
+/* Desktop styles for proper centering */
+@media screen and (min-width: 769px) {
+  .skillhub-loading-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    min-height: 300px !important;
+    padding: 2rem !important;
+  }
+  
+  .skillhub-loading-container.skillhub-overlay {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+  
+  .modern-spinner {
+    margin: 0 auto 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .skillhub-loading-message {
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    position: relative !important;
+  }
+  
+  .skillhub-loading-container.skillhub-overlay .skillhub-loading-message {
+    text-align: center !important;
+    margin: 1rem auto 0 auto !important;
+    position: relative !important;
+  }
 }
 
-/* Mobile responsive font sizes */
+/* Mobile responsive styles for loading spinner */
 @media screen and (max-width: 768px) {
+  .skillhub-loading-container {
+    padding: 1.5rem !important;
+    min-height: 200px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .skillhub-loading-container.skillhub-overlay {
+    padding: 2rem 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  .modern-spinner {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .skillhub-loading-message {
+    text-align: center !important;
+    max-width: 90% !important;
+    word-wrap: break-word !important;
+    display: block !important;
+    margin: 1rem auto 0 auto !important;
+    width: 100% !important;
+  }
+  
   .message-large {
     font-size: 1.1rem;
   }
@@ -191,6 +252,20 @@
 }
 
 @media screen and (max-width: 480px) {
+  .skillhub-loading-container {
+    padding: 1rem !important;
+    min-height: 150px !important;
+  }
+  
+  .skillhub-loading-container.skillhub-overlay {
+    padding: 1.5rem 0.75rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
   .spinner-large .spinner-ring {
     width: 50px;
     height: 50px;
@@ -201,6 +276,23 @@
     width: 35px;
     height: 35px;
     border-width: 2px;
+  }
+  
+  .skillhub-loading-message {
+    max-width: 100% !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+    display: block !important;
+    margin: 1rem auto 0 auto !important;
+    width: 100% !important;
+    padding: 0 1rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .skillhub-loading-container.skillhub-overlay .skillhub-loading-message {
+    padding: 0 0.75rem !important;
+    margin-top: 1rem !important;
+    text-align: center !important;
   }
   
   .message-large {
