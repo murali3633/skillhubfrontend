@@ -107,8 +107,12 @@
 .loading-message {
   color: #4a5568;
   font-weight: 500;
-  text-align: center;
+  text-align: center !important;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .message-small {
@@ -151,6 +155,7 @@
   .loading-container.overlay {
     padding: 2rem 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -158,12 +163,18 @@
   
   .modern-spinner {
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .loading-message {
-    text-align: center;
+    text-align: center !important;
     max-width: 90%;
     word-wrap: break-word;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
   }
   
   .message-large {
@@ -187,6 +198,11 @@
   
   .loading-container.overlay {
     padding: 1.5rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   
   .spinner-large .spinner-ring {
@@ -204,6 +220,10 @@
   .loading-message {
     max-width: 85%;
     line-height: 1.4;
+    text-align: center !important;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
   }
   
   .message-large {
