@@ -137,3 +137,85 @@
   }
 }
 
+/* Mobile responsive styles for loading spinner */
+@media screen and (max-width: 768px) {
+  .loading-container {
+    padding: 1.5rem;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loading-container.overlay {
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .modern-spinner {
+    margin: 0 auto;
+  }
+  
+  .loading-message {
+    text-align: center;
+    max-width: 90%;
+    word-wrap: break-word;
+  }
+  
+  .message-large {
+    font-size: 1.1rem;
+  }
+  
+  .message-medium {
+    font-size: 0.95rem;
+  }
+  
+  .message-small {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .loading-container {
+    padding: 1rem;
+    min-height: 150px;
+  }
+  
+  .loading-container.overlay {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .spinner-large .spinner-ring {
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+  }
+  
+  .spinner-medium .spinner-ring {
+    width: 35px;
+    height: 35px;
+    border-width: 2px;
+  }
+  
+  .loading-message {
+    max-width: 85%;
+    line-height: 1.4;
+  }
+  
+  .message-large {
+    font-size: 1rem;
+  }
+  
+  .message-medium {
+    font-size: 0.9rem;
+  }
+  
+  .message-small {
+    font-size: 0.75rem;
+  }
+}
+
