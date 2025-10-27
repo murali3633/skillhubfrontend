@@ -478,8 +478,14 @@ const Analytics = ({ courses }) => {
           overflow: 'hidden',
           boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
         }}>
+          <div className="table-scroll" style={{
+            overflowX: 'auto',
+            overflowY: 'hidden',
+            WebkitOverflowScrolling: 'touch'
+          }}>
           <table className="analytics-table" style={{ 
             width: '100%', 
+            minWidth: '800px',
             borderCollapse: 'collapse',
             fontSize: '0.875rem'
           }}>
@@ -697,6 +703,7 @@ const Analytics = ({ courses }) => {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </div>
