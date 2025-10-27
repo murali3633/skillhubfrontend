@@ -215,6 +215,19 @@ Always be helpful but CONCISE. Students want quick, clear answers.`;
     }
   };
 
+  // Handle mobile keyboard visibility
+  useEffect(() => {
+    const handleResize = () => {
+      // Force scroll to bottom when keyboard appears/disappears on mobile
+      if (window.innerHeight < 500) {
+        setTimeout(() => scrollToBottom(), 100);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const clearChat = () => {
     setMessages([]);
     setConversationHistory([]);
