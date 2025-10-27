@@ -1015,10 +1015,9 @@ main:has(.syllabus-detail-page) {
     padding: 0.75rem;
   }
   
-  /* Video section first on tablet too */
+  /* Hide video section on tablet - videos open in separate page */
   .video-section {
-    order: 1;
-    min-height: 350px;
+    display: none;
   }
   
   /* Modules sidebar second */
@@ -1236,13 +1235,9 @@ main:has(.syllabus-detail-page) {
     width: 100%;
   }
   
-  /* Video section comes first on mobile */
+  /* Hide video section on mobile - videos open in separate page */
   .video-section {
-    order: 1;
-    min-height: 250px;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    scroll-margin-top: 20px;
+    display: none;
   }
   
   /* Smooth scrolling for better UX */
